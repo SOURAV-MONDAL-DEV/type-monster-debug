@@ -90,6 +90,7 @@ body {
 .bold {
   font-weight: 700;
 }
+
 .inactive {
   border: 2px solid white !important;
 }
@@ -181,6 +182,9 @@ button {
   top: 0;
 }
 
+
+
+
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
@@ -189,4 +193,20 @@ button {
   .card {
     flex-direction: column;
   }
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  #histories {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    padding: 1em;
+    gap: 20px;
+  }
+
+  .card {
+    display: inline;
+  }
+
 }
