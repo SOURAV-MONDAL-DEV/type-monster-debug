@@ -5,8 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .item{
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            background-color: rgb(177, 236, 233);
+        }
+        .brde-b{
+            border-bottom: 3px dashed rgb(244, 7, 252);
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
+
+    <header class="container my-5" >
+        <h1 class=" brde-b text-info text-center fw-bold " >Frequiently Asked Questions</h1>
+    </header>
+
+    <main class="container">
+        <div class="item ">
+            <h2>Difference Between <b>Local Storage</b> and <b>Session Storage :</b></h2>
+            <p><b>Local Storage:</b> <br> This read-only interface property provides access to the Document’s local storage object, the stored data
+                 is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets cleared when the page session ends
+                  – that is when the page is closed. It is cleared when the last “private” tab of a browser is closed (localStorage data for a document
+                   loaded in a private browsing or incognito session). <br> 
+                   <b>Session Storage :</b> <br> It's an objects that can be accessed using the sessionStorage read-only property. The difference between 
+                 sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends.
+                 A unique page session gets created once a document is loaded in a browser tab. Page sessions are valid for only one tab at a time.
+                 Pages are only saved for the amount of time that the tab or the browser is open; they do not persist after the page reloads and
+                 restores. A new session is created each time a tab or window is opened; this is different from session cookies. Each tab/window
+                 that is opened with the same URL creates its own sessionStorage.When you duplicate a tab, the sessionStorage from the original
+                 tab is copied to the duplicated tab. Closing a window/tab ends the session and clears sessionStorage objects. 
+            </p>
+        </div>
+        <div class="item">
+            <h2>Difference Between <b>Global scope</b> and <b>Block scope:</b></h2>
+            <p><b>Global scope:</b> <br>A variable exists inside or outside a block. If a variable is declared outside all functions or curly braces ({}), it exists in the global scope. The global variables can be accessed by any line of code in the program, including inside blocks.
+                <br> 
+                   <b>The Block scope :</b> <br> So far, we’ve seen variables defined with the var keyword. Var can declare a variable either in the global or local scope. The variables that are declared within the block scope are comparable to local ones. They are available within the block that they are defined.
+
+                   The main difference between the local scope and block scope is that the block statements (e.g. if conditions or for loops), don't create a new scope. So the var keyword will not have an effect, because the variables are still in the same scope.
+                   
+                   
+            </p>
+        </div>
+        <div class="item">
+            <h2>How does the <b>event loop</b> work in js? </h2>
+            <p>We’ll start with a somewhat of an odd claim — despite allowing async JavaScript code (like the setTimeout we just discussed), until ES6, JavaScript itself has actually never had any direct notion of asynchronicity built into it. The JavaScript engine has never done anything more than executing a single chunk of your program at any given moment.
+
+                For more details on how JavaScript engines work (Google’s V8 specifically), check one of our previous articles on the topic.
+                
+                So, who tells the JS Engine to execute chunks of your program? In reality, the JS Engine doesn’t run in isolation — it runs inside a hosting environment, which for most developers is the typical web browser or Node.js. Actually, nowadays, JavaScript gets embedded into all kinds of devices, from robots to light bulbs. Every single device represents a different type of hosting environment for the JS Engine.
+            </p>
+        </div>
+        <div class="item">
+            <h2>how many ways to we get <b>undefined</b> in js?</h2>
+            <p> <b>1 Uninitialized variable</b> <br>
+                   A declared variable but not yet assigned with a value (uninitialized) is by default undefined. <br>
+                <b>2 Accessing a non-existing property</b> <br>
+                   When accessing a non-existing object property, JavaScript returns undefined. <br>
+                <b>3 Function parameters</b> <br>
+                   The function parameters implicitly default to undefined. <br>
+                <b>4 Function return value</b> <br>
+                   Implicitly, without return statement, a JavaScript function returns undefined. <br>
+            </p>
+        </div>
+    </main>
     
 </body>
 </html>
